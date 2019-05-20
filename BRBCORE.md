@@ -35,13 +35,21 @@ These instructions will get you a copy of the library up and running on your loc
 
 ### Prerequisites
 
-libbrb_core depends on libssh2, to install in FreeBSD, use ports
+libbrb_core depends on libssh2 and openssl, to install in FreeBSD, use ports (make sure to get ports-tree on install FreeBSD 12)
 
 ```sh
 $ cd /usr/ports/security/libssh2
 /usr/ports/security/libssh2$ make install clean
+$ cd /usr/ports/security/openssl
+/usr/ports/security/openssl$ make install clean
 ```
 
+or you may use pkg
+
+```sh
+$ pkg install libssh2
+$ pkg install openssl
+```
 
 ### Build & Install
 
